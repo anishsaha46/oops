@@ -16,4 +16,13 @@ class Room {
     void dispalay() const {
         cout << "Room Number: " << roomNumber << ", Type: " << roomType << ", Price per Night: $" << priceperNight << ", Availability: " << (isAvailable? "Yes" : "No") << endl;
     }
+
+    void bookRoom(){
+        if(isAvailable){
+            isAvailable = false;
+            cout << "Room " << roomNumber << " booked successfully." << endl;
+        } else{
+            cout << "Room " << roomNumber << " is already booked." << endl;
+        }
+    }
 }
