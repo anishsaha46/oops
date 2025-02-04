@@ -50,5 +50,15 @@ class Booking{
             cout << "Customer Name: " << customerName << ", Room Number: " << roomNumber << ", Check-In Date: " << checkInDate << ", Check-Out Date: " << checkOutDate << endl;
         }
 
-
 };
+
+class Hotel {
+    private:
+    vector<Room> rooms;
+    vector<Booking> bookings;
+
+    public:
+    void addRoom(int number,string type,double price){
+        rooms.push_back(Room(number, type, price));
+    }
+}
