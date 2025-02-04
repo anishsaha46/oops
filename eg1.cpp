@@ -25,4 +25,13 @@ class Room {
             cout << "Room " << roomNumber << " is already booked." << endl;
         }
     }
-}
+
+    void cancelBooking(){
+        if(!isAvailable){
+            isAvailable = true;
+            cout << "Room " << roomNumber << " booking cancelled successfully." << endl;
+        } else{
+            cout << "Room " << roomNumber << " is not booked." << endl;
+        }
+    }
+};
