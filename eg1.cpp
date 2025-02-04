@@ -61,4 +61,17 @@ class Hotel {
     void addRoom(int number,string type,double price){
         rooms.push_back(Room(number, type, price));
     }
-}
+
+    void showAvailableRooms() const{
+        cout << "Available Rooms:" << endl;
+        bool found=false;
+        for(const auto& room : rooms){
+            if(room.isAvailable){
+                room.dispalay();
+                found=true;
+            }
+        }if(!found){
+            cout << "No available rooms." << endl;
+        }
+    }
+};
