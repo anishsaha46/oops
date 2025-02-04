@@ -6,6 +6,7 @@
 using namespace std;
 
 class Room {
+    public:
     int roomNumber;
     string roomType;
     double priceperNight;
@@ -34,4 +35,16 @@ class Room {
             cout << "Room " << roomNumber << " is not booked." << endl;
         }
     }
+};
+
+class Booking{
+    public:
+        string customerName;
+        int roomNumber;
+        string checkInDate;
+        string checkOutDate;
+
+        Booking(string name, int room, string inDate, string outDate) : customerName(name), roomNumber(room), checkInDate(inDate), checkOutDate(outDate){}
+
+        
 };
