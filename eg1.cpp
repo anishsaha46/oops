@@ -46,5 +46,9 @@ class Booking{
 
         Booking(string name, int room, string inDate, string outDate) : customerName(name), roomNumber(room), checkInDate(inDate), checkOutDate(outDate){}
 
-        
+        void displayBooking() const {
+            cout << "Customer Name: " << customerName << ", Room Number: " << roomNumber << ", Check-In Date: " << checkInDate << ", Check-Out Date: " << checkOutDate << endl;
+        }
+
+
 };
